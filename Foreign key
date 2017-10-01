@@ -1,0 +1,6 @@
+Alter table products
+add CONSTRAINT add_foreign_key 
+FOREIGN KEY foreginkey(cat_id) 
+REFERENCES categories(cat_id) 
+on update cascade 
+on delete cascade
