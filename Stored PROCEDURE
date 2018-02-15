@@ -13,6 +13,9 @@ SHOW CREATE PROCEDURE GetAllProducts
 
 CREATE PROCEDURE getOneUser( IN strName varchar(20), OUT tot INT )
 SELECT count(*) INTO tot FROM users where name = strName
+
+call getOneUser('lorem8', @tot); select @tot
+
 ..........................
 
 CREATE PROCEDURE getOneUser( IN strName varchar(20), OUT id INT, OUT gender INT ) SELECT id, gender FROM users WHERE name = strName
