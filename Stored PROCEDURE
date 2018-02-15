@@ -20,3 +20,11 @@ call getOneUser('lorem8', @tot); select @tot
 
 CREATE PROCEDURE getOneUser( IN strName varchar(20), OUT id INT, OUT gender INT ) SELECT id, gender FROM users WHERE name = strName
 ..........................
+
+
+
+In trigger section
+
+begin 
+insert into coffiee_backup values(NEW.id, NEW.name);
+end
