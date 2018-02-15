@@ -23,7 +23,7 @@ CREATE PROCEDURE getOneUser( IN strName varchar(20), OUT id INT, OUT gender INT 
 
 
 
-In trigger section
+IN TRIGGER SECTION
 
 begin 
 insert into coffiee_backup values(NEW.id, NEW.name);
