@@ -22,9 +22,30 @@ CREATE PROCEDURE getOneUser( IN strName varchar(20), OUT id INT, OUT gender INT 
 ..........................
 
 
-
-IN TRIGGER SECTION
+.........................................
+**********  IN TRIGGER SECTION **********
+.........................................
 
 begin 
 insert into coffiee_backup values(NEW.id, NEW.name);
 end
+
+
+
+.........................................
+********  SQL CREATE VIEW Statement ********
+.........................................
+
+In SQL, a view is a virtual table based on the result-set of an SQL statement.
+A view contains rows and columns, just like a real table. The fields in a view are fields from one or more real tables in the database.
+
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+
+show full tables IN test where table_type = 'VIEW'
+
+
+DROP VIEW view_name;
