@@ -38,4 +38,12 @@ SELECT * FROM `wp_posts` order by id IN ( 2, 6) desc, id asc
 
 ..........................................................
 
+Delete Duplicate row in tables
+
+DELETE t1 FROM contacts t1
+        INNER JOIN
+    contacts t2 
+WHERE
+    t1.id < t2.id AND t1.email = t2.email;
+
 
