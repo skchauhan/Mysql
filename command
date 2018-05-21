@@ -45,5 +45,19 @@ DELETE t1 FROM contacts t1
     contacts t2 
 WHERE
     t1.id < t2.id AND t1.email = t2.email;
+    
+    
+    
+.....................
+
+
+Rank set in mysql table
+
+SET @curRank := 0;
+SELECT id, first_name, age, @curRank := @curRank + 1 AS rank
+FROM person
+ORDER BY age
+
+    
 
 
