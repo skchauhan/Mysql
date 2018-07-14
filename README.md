@@ -10,3 +10,12 @@ SELECT * FROM t1 WHERE json_extract(jdoc, '$.key1')='value1'
 
 
 
+======================
+
+Increase Upload file size in phpmyadmin ( PHP.ini )
+
+memory_limit=512M
+post_max_size=80M
+upload_max_filesize=200M
+
+
